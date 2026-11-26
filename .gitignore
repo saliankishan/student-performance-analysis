@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.vscode/
+.DS_Store
+clean_students.csv
+analysis_results.csv
+correlations.csv
