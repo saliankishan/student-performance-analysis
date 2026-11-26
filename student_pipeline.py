@@ -1,10 +1,3 @@
-"""Student performance ETL. Requires Python 3.10+ and pandas.
-
-Put student_performance_messy.csv next to this script, then run:
-    python student_pipeline.py
-All input records are treated as observations; only exact duplicate rows
-are removed. Optional invalid measurements become missing, not invented values.
-"""
 from pathlib import Path
 
 import pandas as pd
