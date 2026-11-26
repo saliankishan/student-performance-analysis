@@ -41,6 +41,24 @@ Attendance: 0 to 75 = Low; above 75 to 90 = Mid; above 90 to 100 = High.
 
 Averages exclude missing measurements. Correlations exclude student IDs and use available measurement pairs. Correlation does not establish causation. All data is synthetic and intended for learning.
 
-## Planned: Power BI report
+## Power BI report
 
-A Power BI report can be added later under `powerbi/`, with exported chart screenshots under `images/`. It will use the generated cleaned dataset. Power BI is not required to run this project.
+![Student performance dashboard](images/student_performance_dashboard.png)
+
+[Download the Power BI report](powerbi/student_performance_dashboard.pbix) and open it in Power BI Desktop. On GitHub, use **Download raw file** on the report file page to save the binary report.
+
+The report shows:
+
+- **182 total students** in the cleaned sample.
+- **Average exam score by attendance:** High 65.0, Mid 58.4, Low 51.5 (rounded to one decimal place).
+
+These results describe fictional sample data, not real student outcomes.
+
+### Refresh with your local CSV
+
+1. Run the Python pipeline to generate `clean_students.csv`.
+2. Open `powerbi/student_performance_dashboard.pbix` in Power BI Desktop.
+3. If the saved source path is unavailable, use **File > Options and settings > Data source settings** to select the CSV source and **Change Source** to your local `clean_students.csv`.
+4. Select **Refresh**, then save the report.
+
+Power BI is optional; the Python pipeline runs independently. The screenshot is a static preview of the saved report.
